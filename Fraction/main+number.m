@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Fraction.h"
 
 int main(int argc, char *argv[]){
     @autoreleasepool {
@@ -40,6 +41,15 @@ int main(int argc, char *argv[]){
         if([intNumber compare:doubleNumber] == NSOrderedAscending){
             NSLog(@"intNumber less than doubleNumber");
         }
+        
+        NSString *nsStr = @"Hello中国";
+        NSLog(@"%@",nsStr);
+        NSLog(@"%@",@"愿世界和平，人民幸福");
+        
+        Fraction *f1 = [[Fraction alloc]init];
+        [f1 setTo:3 over:4];
+        NSLog(@"f1=%@",f1);
+        
     }
     return 0;
 }

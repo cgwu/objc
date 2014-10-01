@@ -15,4 +15,6 @@
 -(void) setTo:(int) a over:(int) b;
 -(void) print;
 
+//定义description方法可以使用NSLog中%@输出对象信息
+-(NSString*) description;
 @end

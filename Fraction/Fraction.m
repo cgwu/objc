@@ -20,4 +20,7 @@
 -(void)print{
     NSLog(@"uuid=%d[%d/%d]",self.uuid,self.numerator,self.denominator);
 }
+-(NSString*) description{
+    return [NSString stringWithFormat: @"%d/%d", self.numerator, self.denominator ];
+}
 @end
