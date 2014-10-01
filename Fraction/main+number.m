@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Fraction.h"
 
-int main(int argc, char *argv[]){
+int main_number(int argc, char *argv[]){
     @autoreleasepool {
         NSInteger myInt;
         NSNumber *intNumber = [NSNumber numberWithInt:10];
