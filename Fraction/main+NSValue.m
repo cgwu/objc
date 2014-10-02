@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-int main(int argc, char *argv[]){
+int main_nsvalue(int argc, char *argv[]){
     @autoreleasepool {
         CGPoint pt;
         pt.x = 1;
@@ -15,6 +15,21 @@ int main(int argc, char *argv[]){
         NSValue * val = [NSValue valueWithPoint:pt];
         
         NSLog(@"%@",val);
+        
+        NSLog(@"------------");
+        // 字典测试
+        NSMutableDictionary *glossary = [NSMutableDictionary dictionary];
+        [glossary setObject:@"Hello中国" forKey:@"中 国"];
+        [glossary setObject:@"~@~!#$ %$&% ^&%^&" forKey:@"Symbols"];
+        [glossary setObject:@"World" forKey:@"hello"];
+        
+        NSLog(@"%@",[glossary valueForKey:@"中 国"]);
+        NSLog(@"%@",[glossary valueForKey:@"Symbols"]);
+        NSLog(@"%@",[glossary valueForKey:@"hello"]);
+        NSLog(@"------------");
+        for(NSString * key in glossary){
+            NSLog(@"key=%@,value=%@",key,[glossary valueForKey:key]);
+        }
     }
     
     return 0;
