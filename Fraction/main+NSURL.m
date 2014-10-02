@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, char *argv[]){
+int main_nsurl(int argc, char *argv[]){
     @autoreleasepool{
         NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
         NSString * homePage = [NSString stringWithContentsOfURL: url encoding:NSUTF8StringEncoding error:nil];
