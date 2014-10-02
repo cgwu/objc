@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-int main(int argc, char *argv[]){
+int main_nsfilemanager(int argc, char *argv[]){
     @autoreleasepool {
         NSString * fName = @"/Users/test5d/Documents/testFile.txt";
 //        NSString * fName = @"~/Documents/testFile.txt";

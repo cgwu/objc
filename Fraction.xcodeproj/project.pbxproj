@@ -18,6 +18,7 @@
 		F5B52DD219DCDDD700BC08D2 /* main+NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B52DD119DCDDD700BC08D2 /* main+NSSet.m */; };
 		F5B52DD419DCE64900BC08D2 /* main+NSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B52DD319DCE64900BC08D2 /* main+NSFileManager.m */; };
 		F5CE13E219DB00ED005E43AE /* MathOpsMinus.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE13E119DB00ED005E43AE /* MathOpsMinus.m */; };
+		F5F6928C19DD51360094BC90 /* main+NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F6928B19DD51360094BC90 /* main+NSURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		F5CE13E019DB00ED005E43AE /* MathOpsMinus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOpsMinus.h; sourceTree = "<group>"; };
 		F5CE13E119DB00ED005E43AE /* MathOpsMinus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOpsMinus.m; sourceTree = "<group>"; };
 		F5CE13E319DB029B005E43AE /* FractionSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractionSign.h; sourceTree = "<group>"; };
+		F5F6928B19DD51360094BC90 /* main+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "main+NSURL.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				F5B52DCF19DC252600BC08D2 /* main+NSValue.m */,
 				F5B52DD119DCDDD700BC08D2 /* main+NSSet.m */,
 				F5B52DD319DCE64900BC08D2 /* main+NSFileManager.m */,
+				F5F6928B19DD51360094BC90 /* main+NSURL.m */,
 				F5CE13E019DB00ED005E43AE /* MathOpsMinus.h */,
 				F5CE13E119DB00ED005E43AE /* MathOpsMinus.m */,
 				F554E11919DA40D30026D986 /* XYPoint.h */,
@@ -171,6 +174,7 @@
 				F5B52DD019DC252600BC08D2 /* main+NSValue.m in Sources */,
 				F554E11E19DA4E5A0026D986 /* MathOps.m in Sources */,
 				F554E11019D99F1D0026D986 /* main.m in Sources */,
+				F5F6928C19DD51360094BC90 /* main+NSURL.m in Sources */,
 				F554E11B19DA40D30026D986 /* XYPoint.m in Sources */,
 				F554E11819D99F6C0026D986 /* Fraction.m in Sources */,
 				F5B52DCE19DC047F00BC08D2 /* main+array.m in Sources */,
