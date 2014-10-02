@@ -26,7 +26,7 @@
 
 @end
 
-int main(int argc, char *argv[]){
+int main_nsset(int argc, char *argv[]){
     @autoreleasepool {
         NSMutableSet *s1 = [NSMutableSet setWithObjects:INTOBJ(1),INTOBJ(2),INTOBJ(321), nil];
         NSMutableSet *s2 = [NSMutableSet setWithObjects:INTOBJ(2),INTOBJ(1),INTOBJ(321), nil];
