@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-int main(int argc, char *argv[]){
+int main_archive_read(int argc, char *argv[]){
     @autoreleasepool {
 //        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:@"dict.dat"];
 
