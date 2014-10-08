@@ -11,6 +11,8 @@
 		F554E11819D99F6C0026D986 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = F554E11719D99F6C0026D986 /* Fraction.m */; };
 		F554E11B19DA40D30026D986 /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F554E11A19DA40D30026D986 /* XYPoint.m */; };
 		F554E11E19DA4E5A0026D986 /* MathOps.m in Sources */ = {isa = PBXBuildFile; fileRef = F554E11D19DA4E5A0026D986 /* MathOps.m */; };
+		F5693C3119E38397005FF9FD /* main+archive.m in Sources */ = {isa = PBXBuildFile; fileRef = F5693C3019E38397005FF9FD /* main+archive.m */; };
+		F5693C3319E385E0005FF9FD /* main+archive+read.m in Sources */ = {isa = PBXBuildFile; fileRef = F5693C3219E385E0005FF9FD /* main+archive+read.m */; };
 		F5B52DC919DBAB8B00BC08D2 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B52DC819DBAB8B00BC08D2 /* TestAppDelegate.m */; };
 		F5B52DCC19DBF06D00BC08D2 /* main+number.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B52DCB19DBF06D00BC08D2 /* main+number.m */; };
 		F5B52DCE19DC047F00BC08D2 /* main+array.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B52DCD19DC047F00BC08D2 /* main+array.m */; };
@@ -43,6 +45,8 @@
 		F554E11A19DA40D30026D986 /* XYPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPoint.m; sourceTree = "<group>"; };
 		F554E11C19DA4E5A0026D986 /* MathOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathOps.h; sourceTree = "<group>"; };
 		F554E11D19DA4E5A0026D986 /* MathOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathOps.m; sourceTree = "<group>"; };
+		F5693C3019E38397005FF9FD /* main+archive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "main+archive.m"; sourceTree = "<group>"; };
+		F5693C3219E385E0005FF9FD /* main+archive+read.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "main+archive+read.m"; sourceTree = "<group>"; };
 		F5B52DC619DBAB4600BC08D2 /* ProcessDataDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcessDataDelegate.h; sourceTree = "<group>"; };
 		F5B52DC719DBAB8B00BC08D2 /* TestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppDelegate.h; sourceTree = "<group>"; };
 		F5B52DC819DBAB8B00BC08D2 /* TestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				F5B52DD319DCE64900BC08D2 /* main+NSFileManager.m */,
 				F5F6928B19DD51360094BC90 /* main+NSURL.m */,
 				F5F6929119DDBFB30094BC90 /* main+copy.m */,
+				F5693C3019E38397005FF9FD /* main+archive.m */,
+				F5693C3219E385E0005FF9FD /* main+archive+read.m */,
 				F5CE13E019DB00ED005E43AE /* MathOpsMinus.h */,
 				F5CE13E119DB00ED005E43AE /* MathOpsMinus.m */,
 				F554E11919DA40D30026D986 /* XYPoint.h */,
@@ -177,7 +183,9 @@
 				F5B52DD019DC252600BC08D2 /* main+NSValue.m in Sources */,
 				F554E11E19DA4E5A0026D986 /* MathOps.m in Sources */,
 				F554E11019D99F1D0026D986 /* main.m in Sources */,
+				F5693C3119E38397005FF9FD /* main+archive.m in Sources */,
 				F5F6928C19DD51360094BC90 /* main+NSURL.m in Sources */,
+				F5693C3319E385E0005FF9FD /* main+archive+read.m in Sources */,
 				F554E11B19DA40D30026D986 /* XYPoint.m in Sources */,
 				F554E11819D99F6C0026D986 /* Fraction.m in Sources */,
 				F5B52DCE19DC047F00BC08D2 /* main+array.m in Sources */,
