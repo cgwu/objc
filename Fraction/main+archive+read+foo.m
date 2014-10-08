@@ -19,8 +19,19 @@ int main(int argc, char *argv[]){
         
         [f1 print];
         
-        Foo *f2 = [f1 mutableCopy];
-        [f2 print];
+//        Foo *f2 = [f1 mutableCopy]; //试验未成功
+//        [f2 print];
+
+        [NSKeyedArchiver archiveRootObject: f1 toFile: @"Foo.archive"];
+        
+        Foo *fUnarchive = [NSKeyedUnarchiver unarchiveObjectWithFile: @"Foo.archive"];
+        [fUnarchive print];
+        
+        NSLog(@"___________");
+        
+        fUnarchive.strVal = @"世界和平";
+        [f1 print];
+        [fUnarchive print];
         
     }
     return 0;

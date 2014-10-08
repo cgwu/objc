@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F550B26619E51456004AF0F8 /* main+archive+read+foo.m in Sources */ = {isa = PBXBuildFile; fileRef = F550B26519E51456004AF0F8 /* main+archive+read+foo.m */; };
+		F550B26919E51463004AF0F8 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = F550B26819E51463004AF0F8 /* Foo.m */; };
 		F554E11019D99F1D0026D986 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F554E10F19D99F1D0026D986 /* main.m */; };
 		F554E11819D99F6C0026D986 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = F554E11719D99F6C0026D986 /* Fraction.m */; };
 		F554E11B19DA40D30026D986 /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F554E11A19DA40D30026D986 /* XYPoint.m */; };
@@ -37,6 +39,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F550B26519E51456004AF0F8 /* main+archive+read+foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "main+archive+read+foo.m"; sourceTree = "<group>"; };
+		F550B26719E51463004AF0F8 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		F550B26819E51463004AF0F8 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		F554E10C19D99F1D0026D986 /* Fraction */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Fraction; sourceTree = BUILT_PRODUCTS_DIR; };
 		F554E10F19D99F1D0026D986 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F554E11619D99F6C0026D986 /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
@@ -103,6 +108,9 @@
 				F5F6929119DDBFB30094BC90 /* main+copy.m */,
 				F5693C3019E38397005FF9FD /* main+archive.m */,
 				F5693C3219E385E0005FF9FD /* main+archive+read.m */,
+				F550B26519E51456004AF0F8 /* main+archive+read+foo.m */,
+				F550B26719E51463004AF0F8 /* Foo.h */,
+				F550B26819E51463004AF0F8 /* Foo.m */,
 				F5CE13E019DB00ED005E43AE /* MathOpsMinus.h */,
 				F5CE13E119DB00ED005E43AE /* MathOpsMinus.m */,
 				F554E11919DA40D30026D986 /* XYPoint.h */,
@@ -178,6 +186,7 @@
 			files = (
 				F5B52DD419DCE64900BC08D2 /* main+NSFileManager.m in Sources */,
 				F5B52DD219DCDDD700BC08D2 /* main+NSSet.m in Sources */,
+				F550B26919E51463004AF0F8 /* Foo.m in Sources */,
 				F5B52DC919DBAB8B00BC08D2 /* TestAppDelegate.m in Sources */,
 				F5B52DCC19DBF06D00BC08D2 /* main+number.m in Sources */,
 				F5B52DD019DC252600BC08D2 /* main+NSValue.m in Sources */,
@@ -186,6 +195,7 @@
 				F5693C3119E38397005FF9FD /* main+archive.m in Sources */,
 				F5F6928C19DD51360094BC90 /* main+NSURL.m in Sources */,
 				F5693C3319E385E0005FF9FD /* main+archive+read.m in Sources */,
+				F550B26619E51456004AF0F8 /* main+archive+read+foo.m in Sources */,
 				F554E11B19DA40D30026D986 /* XYPoint.m in Sources */,
 				F554E11819D99F6C0026D986 /* Fraction.m in Sources */,
 				F5B52DCE19DC047F00BC08D2 /* main+array.m in Sources */,
