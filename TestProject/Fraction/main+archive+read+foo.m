@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Foo.h"
 
-int main(int argc, char *argv[]){
+int main_archive_read_foo(int argc, char *argv[]){
     @autoreleasepool {
         
         Foo *f1 = [[Foo alloc] init];
