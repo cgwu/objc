@@ -291,7 +291,56 @@ c2.name = "c2"
 c1.name
 c2.name
 
+//ARC : Auto Reference Counting 自动引用计数
+class Person{
+    var name: String
+    init(name:String){
+        self.name = name
+        println("\(name) is inited.")
+    }
+    deinit{
+        println("\(name) is deinited")
+    }
+}
+var p1:Person?
+var p2:Person?
+var p3:Person?
+p1 = Person(name:"zhansan")
+p2 = p1
+p3 = p1
+p1 = nil
+p2 = nil
+p3 = nil
 
+//Extensions扩展：给现有的类，结构体，枚举增加新的属性，方法，构造函数等，或增加新的接口Protocol
+//扩展属性
+var d:Double = 1_000
+extension Double{
+    var km: Double {return self * 1000}
+    var m: Double {return self}
+    var mm: Double {return self / 1000}
+}
+d.km
+d.m
+d.mm
+//扩展方法
+extension Int{
+    //执行多次任务
+    func repetitions(task:()->()){
+        for i in 0..<self{
+            task()
+        }
+    }
+    mutating func square(){
+        self = self * self
+    }
+}
+3.repetitions({
+    println("Hello world")
+})
+var someInt = 4
+someInt.square()
+someInt
 
 
 
