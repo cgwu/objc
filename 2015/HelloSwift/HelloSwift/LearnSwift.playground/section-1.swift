@@ -342,8 +342,179 @@ var someInt = 4
 someInt.square()
 someInt
 
+//Subscripts: 使用方括号访问成员元素的一种快捷方式
+struct TimesTable{
+    let multiplier:Int
+    subscript(index: Int) -> Int{
+        return multiplier * index
+    }
+}
+var t1 = TimesTable(multiplier: 3)
+t1[2]
+//示例2: 矩阵
+struct Matrix{
+    let rows:Int, columns:Int
+    var grid:[Double]
+    init(rows:Int, columns:Int){
+        self.rows = rows
+        self.columns = columns
+        grid = Array( count: rows * columns, repeatedValue: 0.0)
+    }
+    func indexIsValidForRow(row:Int, column:Int)->Bool{
+        return row >= 0 && row < rows && column >= 0 && column < columns
+    }
+    subscript (row:Int, column: Int)-> Double{
+        get{
+            assert( indexIsValidForRow(row, column: column), "Index out of range")
+            return grid[ columns * row + column]
+        }
+        set{
+            assert( indexIsValidForRow(row, column: column), "Index out of range")
+            grid[ columns * row + column] = newValue
+        }
+    }
+}
+var m1 = Matrix(rows: 3, columns: 3)
+m1[2,2] = 1
+m1[0,0]
+m1[0,1] = 2
+/******** 可选链 Optional Chain *******/
+class People {
+    var residence: Residency?
+}
+class Residency {
+    var numberOfRooms = 1
+}
+var people1 = People()
+//people1.residence = Residency()
+//people1.residence!.numberOfRooms    //发生错误
+println(people1.residence?.numberOfRooms)
+//在if中判断
+if let rooms = people1.residence?.numberOfRooms {
+    println("我有\(rooms)个房间")
+}
+else{
+    println("没有空房间了")
+}
+/*********** 类型转换 Type Casting (注意is与as?的用法)*************/
+class MediaItem {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+class Movie: MediaItem {
+    var director: String
+    init(name: String, director: String) {
+        self.director = director
+        super.init(name: name)
+    }
+}
 
+class Song: MediaItem {
+    var artist: String
+    init(name: String, artist: String) {
+        self.artist = artist
+        super.init(name: name)
+    }
+}
+let library = [
+    Movie(name: "Casablanca", director: "Michael Curtiz"),
+    Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
+    Movie(name: "Citizen Kane", director: "Orson Welles"),
+    Song(name: "The One And Only", artist: "Chesney Hawkes"),
+    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
+]
+var movieCount = 0
+var songCount = 0
 
+for item in library {
+    if item is Movie {
+        ++movieCount
+    } else if item is Song {
+        ++songCount
+    }
+}
+println("Media library contains \(movieCount) movies and \(songCount) songs")
+//AnyObject是相同的类型
+let someObjects: [AnyObject] = [
+    Movie(name: "2001: A Space Odyssey", director: "Stanley Kubrick"),
+    Movie(name: "Moon", director: "Duncan Jones"),
+    Movie(name: "Alien", director: "Ridley Scott")
+]
+for object in someObjects {
+    let movie = object as Movie
+    println("Movie: '\(movie.name)', dir. \(movie.director)")
+}
+//Any可以是不同的类型
+var things = [Any]()
+
+things.append(0)
+things.append(0.0)
+things.append(42)
+things.append(3.14159)
+things.append("hello")
+things.append((3.0, 5.0))
+things.append(Movie(name: "Ghostbusters", director: "Ivan Reitman"))
+things.append({ (name: String) -> String in "Hello, \(name)" })
+
+for thing in things {
+    switch thing {
+    case 0 as Int:
+        println("zero as an Int")
+    case 0 as Double:
+        println("zero as a Double")
+    case let someInt as Int:
+        println("an integer value of \(someInt)")
+    case let someDouble as Double where someDouble > 0:
+        println("a positive double value of \(someDouble)")
+    case is Double:
+        println("some other double value that I don't want to print")
+    case let someString as String:
+        println("a string value of \"\(someString)\"")
+    case let (x, y) as (Double, Double):
+        println("an (x, y) point at \(x), \(y)")
+    case let movie as Movie:
+        println("a movie called '\(movie.name)', dir. \(movie.director)")
+    case let stringConverter as String -> String:
+        println(stringConverter("Michael"))
+    default:
+        println("something else")
+    }
+}
+
+/***** 协议: Protocol ****/
+protocol SomeProtocol {
+    var mustBeSettable: Int { get set }
+    var doesNotNeedToBeSettable: Int { get }
+}
+/*As with type property requirements, you always prefix type method requirements with the class keyword when they are defined in a protocol. This is true even though type method requirements are prefixed with the static keyword when implemented by a structure or enumeration:*/
+protocol AnotherProtocol {
+    class var someTypeProperty: Int { get set }
+}
+protocol FullyNamed {
+    var fullName: String { get }
+}
+struct FullPerson: FullyNamed {
+    var fullName: String
+}
+let john = FullPerson(fullName: "John Appleseed")
+
+struct Account{
+    var owner: String = "Tony"
+    static var rate = 0.668     //静态属性
+    static func fee(amount:Double)-> Double{
+        return rate * amount    //静态方法
+    }
+    func messageFee(amount: Double) -> String{
+        var amt = Account.fee(amount)
+        return "\(self.owner) 该出的利息是\(amt)"
+    }
+}
+var zhangsan = Account( owner: "张三")
+zhangsan.messageFee(100)
+Account.rate = 0.334
+zhangsan.messageFee(100)
 
 
 
