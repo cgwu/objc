@@ -515,6 +515,33 @@ var zhangsan = Account( owner: "张三")
 zhangsan.messageFee(100)
 Account.rate = 0.334
 zhangsan.messageFee(100)
+/******** Generics 泛型 ********/
+func swap2Ints(inout a:Int, inout b:Int){
+    var t = a
+    a = b
+    b = t
+}
+var sa = 1
+var sb = 2
+swap2Ints(&sa, &sb)
+sa
+sb
+
+func swap2Values<T>(inout a:T, inout b:T){
+    let tmp = a
+    a = b
+    b = tmp
+}
+swap2Values(&sa,&sb)
+sa
+sb
+var s1 = "Hello"
+var s2 = "中国"
+swap2Values(&s1, &s2)
+s1
+s2
+
+
 
 
 
