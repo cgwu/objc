@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 
     @IBAction func btnHelloClicked(sender: UIButton) {
         self.lblHello.text = "你好 \(self.txtName.text)"
+        self.txtName.text = ""
     }
 }
 
