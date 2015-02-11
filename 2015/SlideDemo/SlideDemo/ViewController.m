@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblSlide;
 
 @end
 
@@ -24,4 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)SlideValueChange:(UISlider *)sender {
+    self.lblSlide.text = [NSString stringWithFormat:@"%.0f", sender.value];
+}
 @end
