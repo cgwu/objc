@@ -14,6 +14,7 @@ println(1+1)
 
 
 //ARC : Auto Reference Counting 自动引用计数
+/*
 class Person{
     var name: String
     init(name:String){
@@ -33,3 +34,52 @@ p3 = p1
 p1 = nil
 p2 = nil
 p3 = nil
+*/
+
+//属性监视器
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet {
+            println("将要设置:\(newValue)")
+        }
+        didSet {
+            println("旧值:\(oldValue),新值:\(totalSteps)")
+        }
+    }
+    func foo() {
+        println("StepCounter foo() called")
+    }
+}
+var sc = StepCounter()
+sc.totalSteps = 110
+sc.totalSteps = 220
+sc.foo()
+
+
+//ARC & weak reference
+class Person {
+    var name: String
+    init(name:String) {
+        self.name = name
+    }
+    var apartment: Apartment?
+    deinit {
+        println("\(name) deinit")
+    }
+}
+class Apartment {
+    weak var tenant: Person?
+    deinit {
+        println("Apartment deinit")
+    }
+}
+
+var john = Person(name: "John")
+var arp1 = Apartment()
+john.apartment = arp1
+arp1.tenant = john
+john.apartment = nil
+println("end ARC test")
+
+
+

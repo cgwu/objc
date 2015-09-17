@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>35427E0D-EE65-4E7D-92A4-308CC00CF0A6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>HelloSwift</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2ABF9D28471D835A0B00A2EDCDBE76D961796467</key>
 		<string>https://github.com/cgwu/objc.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>2015/HelloSwift/HelloSwift.xcodeproj</string>
+	<string>2015/HelloSwift/HelloSwift.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2ABF9D28471D835A0B00A2EDCDBE76D961796467</key>
