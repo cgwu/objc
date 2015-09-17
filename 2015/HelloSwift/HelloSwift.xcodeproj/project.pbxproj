@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		F56F1F8E1A885D5500335945 /* LearnSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LearnSwift.playground; sourceTree = "<group>"; };
+		F5A9C3E61BAA68BC00082345 /* TheSwiftProgrammingLanguage.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TheSwiftProgrammingLanguage.playground; sourceTree = "<group>"; };
 		F5F4C9401A86895600DED34D /* HelloSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F4C9431A86895600DED34D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +59,7 @@
 		F5F4C9421A86895600DED34D /* HelloSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F5A9C3E61BAA68BC00082345 /* TheSwiftProgrammingLanguage.playground */,
 				F5F4C9431A86895600DED34D /* main.swift */,
 				F56F1F8E1A885D5500335945 /* LearnSwift.playground */,
 			);
@@ -206,6 +208,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.4;
 			};
 			name = Debug;
 		};
@@ -213,6 +216,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos8.4;
 			};
 			name = Release;
 		};
