@@ -15,8 +15,17 @@ int main(int argc, char * argv[]) {
 		// [myFraction setDenominator: 3];
 		myFraction.numerator = 11;
 		myFraction.denominator = 33;
+		[myFraction setDenominator: 44];	//调用自动一成的set方法，与上一行等同
 
 		NSLog(@"The Value of myFraction is:");
+		[myFraction print];
+
+		[myFraction setTo: 3 over: 12];
+		NSLog(@"The new Value of myFraction is:");
+		[myFraction print];
+		NSLog(@"doubleValue:%f", [myFraction convertToNum]);
+		[myFraction reduce];
+		NSLog(@"The new Value of myFraction is after reduce:");
 		[myFraction print];
 
 		[Fraction fooClassMethod];

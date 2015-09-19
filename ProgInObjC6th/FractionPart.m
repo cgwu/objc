@@ -18,6 +18,31 @@ first character of its name.
 */
 @synthesize numerator, denominator;
 
+-(void) setTo: (int) n over: (int) d {
+	numerator = n;
+	denominator = d;
+}
+-(double) convertToNum {
+	if (denominator != 0) {
+		return (double)numerator / (double)denominator;
+	}
+	else 
+		return NAN;
+}
+-(void) reduce {
+	int u = numerator;
+	int v = denominator;
+	int temp = 0;
+	// 求出最大公司数: u
+	while (v != 0) {
+		temp = u % v;
+		u = v;
+		v = temp;
+	}
+	numerator /= u;
+	denominator /= u;
+}
+
 -(void) print {
 	NSLog(@"%i/%i",numerator, denominator);
 }
