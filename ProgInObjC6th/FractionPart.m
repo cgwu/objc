@@ -29,6 +29,12 @@ first character of its name.
 	else 
 		return NAN;
 }
+-(void) add: (Fraction *) other {
+	self.numerator = self.numerator * other.denominator +
+		self.denominator * other.numerator;
+	self.denominator *= other.denominator;
+	[self reduce];
+}
 -(void) reduce {
 	int u = numerator;
 	int v = denominator;

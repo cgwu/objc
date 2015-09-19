@@ -36,8 +36,13 @@ int main(int argc, char * argv[]) {
 		NSLog(@"2nd way: myFraction: numerator:%d, denominator:%d",
 			[myFraction numerator], [myFraction denominator]);
 
-		NSLog(@"分开编绎v2");
+		NSLog(@"分开编绎v2------------");
 
+		Fraction *other = [[Fraction alloc] init];
+		[other setTo: 1 over: 12];
+		[myFraction add: other];
+		NSLog(@"The new Value of myFraction is:");
+		[myFraction print];
 	}
 	return 0;
 }

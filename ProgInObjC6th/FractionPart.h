@@ -15,6 +15,7 @@
 -(void) setTo: (int) n over: (int) d;
 -(double) convertToNum;
 -(void) reduce;
+-(void) add: (Fraction *) other;
 
 +(void) fooClassMethod;
 
