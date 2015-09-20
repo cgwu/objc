@@ -18,6 +18,15 @@ first character of its name.
 */
 @synthesize numerator, denominator;
 
+// 自定义初始方法的标准模板
+-(Fraction *) initWith: (int) n over: (int) d {
+	self = [super init];
+	if(self){
+		[self setTo: n over: d];
+	}
+	return self;
+}
+
 -(void) setTo: (int) n over: (int) d {
 	numerator = n;
 	denominator = d;

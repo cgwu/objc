@@ -6,6 +6,8 @@
 // 自动合成属性
 @property int numerator, denominator;
 
+-(Fraction *) initWith: (int) n over: (int) d;
+
 -(void) print;
 // -(void) setNumerator: (int) n;
 // -(void) setDenominator: (int) d;
