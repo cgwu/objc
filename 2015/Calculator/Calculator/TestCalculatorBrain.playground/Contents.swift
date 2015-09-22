@@ -5,4 +5,8 @@ import UIKit
 var str = "Hello, playground"
 print(str)
 
+var i = 0
+i++
+i++
+++i
 

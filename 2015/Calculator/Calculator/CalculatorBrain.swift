@@ -58,20 +58,24 @@ class CalculatorBrain {
 //        knownOps["√"] = Op.UnaryOperation("√", sqrt)
     }
     
-    private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
+    //Swift 数组,字典 是传值的。
+    private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {   //函数返回一个命名的元组
         if !ops.isEmpty {
-            var remainingOps = ops
-            let op = remainingOps.removeLast()
+            var remainders = ops    //除栈顶后剩下的栈
+            let op = remainders.removeLast()    //栈顶的元素
             switch op {
-            case .Operand(let operand) :
-                return (operand, remainingOps)
-            case .UnaryOperation(_, let operation):
-                let operandEvaluation = evaluate(remainingOps)
+                
+            case .Operand(let operand):     //操作数
+                return (operand, remainders)
+                
+            case .UnaryOperation(_, let operation):  //一元操作符
+                let operandEvaluation = evaluate(remainders)
                 if let operand = operandEvaluation.result {
                     return (operation(operand), operandEvaluation.remainingOps)
                 }
-            case .BinaryOperation(_, let operation):
-                let op1Evaluation = evaluate(remainingOps)
+                
+            case .BinaryOperation(_, let operation): //二元操作符
+                let op1Evaluation = evaluate(remainders)
                 if let operand1 = op1Evaluation.result {
                     let op2Evaluation = evaluate(op1Evaluation.remainingOps)
                     if let operand2 = op2Evaluation.result {
