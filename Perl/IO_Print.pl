@@ -8,10 +8,13 @@ binmode(STDIN, ':encoding(utf8)');
 binmode(STDOUT, ':encoding(utf8)');
 binmode(STDERR, ':encoding(utf8)');
 
-
+=pod
 if(! open LOG, '>>:utf8', '/Users/user/Documents/log.txt') {
 	die "Cannot open log.txt: ($!)";
 }
+=cut
+open LOG, '>>:utf8', './log.txt'
+	or die "Cannot open log.txt: ($!)";
 
 printf LOG "str: %s, int: %d, float: %f !\n", "Hello中国", 321341234, 3.1415926;
 
