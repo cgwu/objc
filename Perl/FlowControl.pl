@@ -54,6 +54,7 @@ foreach(1..10) {
 }
 print "\n";
 # redo操作符
+=pod
 my @words = qw( fred barney pebbles dino wilma betty );
 my @errors = 0;
 foreach(@words) {
@@ -67,8 +68,27 @@ foreach(@words) {
 	}
 }
 say "You've completed the test, with $errors errors.";
+=cut
 
-
+=pod
+循环标签:
+LINE: while(<>){
+	foreach (split) {
+		last LINE if //__END__;   # 跳出标签为LINE的循环
+		...
+	}
+}
+=cut
+$num = 8;
+if ($num  <6 ){
+	say "<6";
+}
+elsif ($num < 10) {
+	say "<10";
+}
+else {
+	say 'other case';
+}
 
 
 

@@ -53,6 +53,26 @@ say '-----%ENV hash-------';
 say "PATH is $ENV{PATH}\n";
 
 
+my %last_name2 = (
+	fred => 'flintstone',
+	dino => 0,
+	barney => 'rubble',
+	betty => 'rubble'
+);
+my $somename = $last_name2{'dino'};
+# 短路 操作符 || ,若前表达式为假，则取后面的值。 缺点：若值为假，也替换了。
+say $somename || 'undefined';	
+# 定义或 操作符 //, 只有当前表达式为 undef时，才使用表达式后面的值。
+say $somename // 'undef';	
+
+$m = 1;
+$n = 10;
+#($m < $n) && ($m = $n);
+#if($m < $n) { $m = $n; } 
+$m = $n if $m < $n;
+say "m = $m, n = $n";
+
+
 
 
 
