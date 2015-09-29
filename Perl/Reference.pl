@@ -48,6 +48,31 @@ check_required_items2('Professor', \@professor);
 #my @gilligan = qw(red_shirt hat lucky_socks water_bottle); 
 check_required_items2('Gilligan', \@gilligan);
 
+say "--------check and modify------------";
+
+#第1个参数$_[0]为名字，第2个参数$_[1]为数组引用Array Reference.
+sub check_required_items3 {
+	my %who_items = map { $_, 1 } @{ $_[1] };	# 第2个参数转为map
+	my @missing = ( );
+
+	my @required = qw(preserver sunscreen water_bottle jacket);
+	for my $item (@required) {
+		unless ( $who_items{$item} ) {	# not found in list?
+			print "$_[0] is missing: $item.\n";
+			push @missing, $item;
+		}
+	}
+	if(@missing){
+		print "Adding @missing to @{$_[1]} for $_[0].\n";
+		push @{$_[1]}, @missing;
+	}
+}
+check_required_items3('The Skipper', \@skipper);
+say "@skipper";
+check_required_items3('Professor', \@professor);
+say "@professor";
+check_required_items3('Gilligan', \@gilligan);
+say "@gilligan";
 
 __END__
 
