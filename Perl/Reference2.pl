@@ -5,6 +5,8 @@ use strict;
 use warnings;
 use diagnostics;
 
+use Carp qw(croak);
+
 binmode(STDIN, ':encoding(utf8)');
 binmode(STDOUT, ':encoding(utf8)');
 binmode(STDERR, ':encoding(utf8)');
@@ -32,5 +34,22 @@ say "$root −> [2][1][0]";
 say "$skipper_with_name[0]";
 say "$skipper_with_name[1]";
 #say "$skipper_with_name[2]";
+
+my %gilligan_info = (
+	name => 'Gilligan', 
+	hat => 'White', 
+	shirt => 'Red', 
+	position => 'First Mate',
+);
+my $hash_ref = \%gilligan_info;
+my $ref_type = ref $hash_ref;
+say $ref_type;
+say $ref_type eq 'HASH';
+
+croak "I expected a hash reference!"
+	unless $ref_type eq 'HASH';
+
+say 'done';
+
 
 __END__
