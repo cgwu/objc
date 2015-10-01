@@ -49,6 +49,24 @@ say $ref_type eq 'HASH';
 croak "I expected a hash reference!"
 	unless $ref_type eq 'HASH';
 
+say "----------------------------";
+my @arr1 = ['abc中国', [11,'abc',3.1415]];
+say "$arr1[0][1][1]";
+say "$arr1[0][0]";
+
+my @arr2 = ('abc' => 'efg' => 'hij');	
+say "$arr2[0],$arr2[1],$arr2[2]";
+
+say "------------ anonymous hash ----------------";
+my $ref_to_gilligan_info = { 
+	'full name' => 'Gilligan good', 
+	hat => 'White',
+	shirt => 'Red', 
+	position => 'First Mate',
+};
+say $ref_to_gilligan_info->{'full name'};		# hash reference使用
+
+
 say 'done';
 
 
