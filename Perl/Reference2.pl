@@ -49,10 +49,11 @@ say $ref_type eq 'HASH';
 croak "I expected a hash reference!"
 	unless $ref_type eq 'HASH';
 
-say "----------------------------";
-my @arr1 = ['abc中国', [11,'abc',3.1415]];
-say "$arr1[0][1][1]";
-say "$arr1[0][0]";
+say "-----------数组引用-----------------";
+my $arr1 = ['abc中国', [11,'abc',3.1415], 456789];
+say "$arr1->[0]";
+say "$arr1->[1][2]";
+say $arr1->[2];
 
 my @arr2 = ('abc' => 'efg' => 'hij');	
 say "$arr2[0],$arr2[1],$arr2[2]";
@@ -66,6 +67,8 @@ my $ref_to_gilligan_info = {
 };
 say $ref_to_gilligan_info->{'full name'};		# hash reference使用
 
+my $coderef = sub { print "Boink!\n" }; 
+&$coderef;		# 调用 anonymous subroutine
 
 say 'done';
 
